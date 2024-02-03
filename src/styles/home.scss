@@ -90,7 +90,7 @@
             border-top: 1px solid $lightgray;
             display: flex;
             flex-direction: column;
-            justify-content:end;
+            justify-content:flex-end;
             align-items: center;
             overflow-x: hidden;
 
@@ -109,6 +109,7 @@
                 width: 40vmax;
                 object-fit: contain;
                 height: 35vmax;
+                filter: drop-shadow(0 0 10px rgba(0,0,0,0.675));
             }
         }
     }

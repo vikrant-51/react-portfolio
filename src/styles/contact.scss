@@ -1,0 +1,71 @@
+#contact {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    // border-top: 5px solid $water;
+
+    >section {
+        background-color: $mediumaquamarine;
+        width: 100%;
+        height: 100%;
+
+        >form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+
+            >h2 {
+                text-align: center;
+                font: 100 2.5rem $text2;
+                letter-spacing: 5px;
+                text-transform: uppercase;
+                margin: 2rem;
+            }
+
+            >input,
+            >button,
+            >textarea {
+                padding: 0.8rem;
+                width: 40%;
+                outline: none;
+                font: 400 0.9rem $text1;
+                margin: 1rem;
+                border: none;
+            }
+
+            >button {
+                cursor: pointer;
+                background-color: $dark;
+                color: $water;
+                font: 600 1rem $text1;
+                text-transform: uppercase;
+                margin: 3rem;
+                // border: 1px solid $lightgray;
+
+                &:hover {
+                    background-color: $dark_light;
+                    color: $water;
+
+                }
+            }
+        }
+    }
+
+    >aside {
+        width: 100%;
+        height: 100%;
+        background-color: $water;
+        display: grid;
+        place-items: center;
+
+        img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+            filter: drop-shadow(0 0 10px rgba(255, 253, 253, 0.675)) hue-rotate(293deg);
+            animation: upupdowndown 0.7s infinite linear alternate;
+        }
+    }
+}
