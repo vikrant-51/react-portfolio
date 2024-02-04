@@ -1,25 +1,52 @@
 import React, { useState } from "react";
 import img from "../assets/vg.png";
 import toast from "react-hot-toast";
-const Contact = () => {
-//   const [name, setName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [message, setMessage] = useState("");
+import { motion } from "framer-motion";
 
-  const [inputs, setInputs] = useState({name:"", email:"", message:""});
-    const changeHandler = (e)=>{
-        setInputs({...inputs, [e.target.name]:e.target.value})
-    }
+const Contact = () => {
+  const [disableBtn, setDisableBtn] = useState(false);
+  const [inputs, setInputs] = useState({ name: "", email: "", message: "" });
+  const changeHandler = (e) => {
+    setInputs({ ...inputs, [e.target.name]: e.target.value });
+  };
   const submitHandler = (e) => {
     e.preventDefault();
+    setInputs({name:"", email:"", message:""})
     toast.success("Message Sent");
   };
 
-
+  const animations = {
+    form: {
+      initial: {
+        x: "100%",
+        opacity: 0,
+      },
+      whileInView: {
+        x: "0%",
+        opacity: 1,
+      },
+      transition: {
+        delay: 0.2,
+      },
+    },
+    button: {
+      initial: {
+        y: "100%",
+        opacity: 0,
+      },
+      whileInView: {
+        y: "0%",
+        opacity: 1,
+      },
+      transition: {
+        delay: 0.3,
+      },
+    },
+  };
   return (
     <div id="contact">
       <section>
-        <form onSubmit={submitHandler}>
+        <motion.form {...animations.form} onSubmit={submitHandler}>
           <h2>Contact</h2>
           <input
             type="text"
@@ -44,8 +71,15 @@ const Contact = () => {
             placeholder="Your Message"
             required
           ></textarea>
-          <button type="submit">Send</button>
-        </form>
+          <motion.button
+            disabled={disableBtn}
+            className={disableBtn ? "disabledBtn" : ""}
+            {...animations.button}
+            type="submit"
+          >
+            Send
+          </motion.button>
+        </motion.form>
       </section>
       <aside>
         <img src={img} alt="" width={500} height={500} />

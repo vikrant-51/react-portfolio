@@ -3,11 +3,12 @@ import data from "../assets/data.json";
 const Timeline = () => {
   return (
     <div id="timeline">
+      <h2>Experience</h2>
       <div className="timelineBox">
         {data.experience.map((i, index) => (
           <TimelineItem
             heading={i.jobTitle}
-            text={i.jobDescription}
+            text={i.date}
             index={index}
             key={i.jobTitle}
           />
@@ -25,7 +26,7 @@ const TimelineItem = ({ heading, text, index }) => (
   >
     <div>
       <h2>{heading}</h2>
-      <p style={{ textAlign: "justify" }}>{text}</p>
+      <p>{text}</p>
     </div>
   </div>
 );

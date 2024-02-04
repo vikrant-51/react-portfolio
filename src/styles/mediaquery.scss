@@ -1,0 +1,68 @@
+@media screen and (max-width: 1367px) {
+    nav {
+        padding: 0 $p_md;
+    }
+
+    #home {
+        height: 100vh;
+
+        >section {
+            &:first-of-type {
+                padding-left: $p_md;
+
+                >div aside {
+                    width: 85%;
+                }
+            }
+        }
+    }
+
+    #work {
+        padding: 8rem $p_md;
+        height: 110vh;
+
+        >section {
+            >article {
+                height: 20rem;
+                width: 90%;
+            }
+
+            .workItem {
+                padding: 2rem;
+                height: 20rem;
+
+                >aside {
+                    >p {
+                        margin: 1rem;
+                    }
+
+                    >a {
+                        margin: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #services {
+        padding: $p_md;
+
+        >section {
+            height: 90%;
+        }
+    }
+
+    #contact>section>form {
+
+        >input,
+        >button,>textarea {
+            font: 400 0.8rem $text1;
+            width: 50%;
+
+        }
+    }
+
+    footer{
+        padding-left: $p_md;
+    }
+}

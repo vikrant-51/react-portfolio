@@ -6,13 +6,13 @@ const Services = () => {
 
     const animations = {
         whileInView:{
-            x:0,
+            x:"0%",
             y:0,
             opacity:1
         },
         one:{
-            opacity:0,
-            x:"-100%"
+            x:"100%",
+            opacity:0
         },
         two:{
             opacity:0,
@@ -20,7 +20,7 @@ const Services = () => {
         },
         three:{
             opacity:0,
-            y:"100%"
+            x:"100%"
         }
     }
 
@@ -34,12 +34,12 @@ const Services = () => {
             <p>Years Experience</p>
 
         </motion.div>
-        <motion.div className="serviceBox2" whileInView={animations.whileInView}
+        <motion.div className="serviceBox2" transition={{damping:10}} whileInView={animations.whileInView}
         initial={animations.two}>
             <AiFillIeCircle/>
             <span>Web Development</span>
         </motion.div>
-        <motion.div className="serviceBox3" whileInView={animations.whileInView}
+        <motion.div className="serviceBox3" transition={{damping:100, stiffness:100}} whileInView={animations.whileInView}
         initial={animations.three}>
             <AiFillAndroid/>
             <span>Android Development</span>

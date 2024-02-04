@@ -2,25 +2,24 @@ import React, { useRef } from "react";
 import { animate, motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
-import me from "../assets/logo.png"
+import me from "../assets/logo.png";
 
 const Home = () => {
-
   const clientCount = useRef(null);
   const projectCount = useRef(null);
-  
-  const animationClientsCount = ()=>{
-    animate(0,100,{
-      duration:1,
-      onUpdate:(v)=>(clientCount.current.textContent = v.toFixed())
-    })
-  }
-  const animationProjectsCount = ()=>{
-    animate(0,500,{
-      duration:1,
-      onUpdate:(v)=>(projectCount.current.textContent = v.toFixed())
-    })
-  }
+
+  const animationClientsCount = () => {
+    animate(0, 100, {
+      duration: 1,
+      onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
+    });
+  };
+  const animationProjectsCount = () => {
+    animate(0, 500, {
+      duration: 1,
+      onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
+    });
+  };
   const animation = {
     h1: {
       initial: {
@@ -40,7 +39,7 @@ const Home = () => {
       whileInView: {
         y: 0,
         opacity: 1,
-      }
+      },
     },
   };
   return (
@@ -66,22 +65,26 @@ const Home = () => {
               Projects <BsArrowUpRight />
             </a>
           </motion.div>
-          <article>
-            <p>
-              +<motion.span whileInView={animationClientsCount} ref={clientCount}></motion.span>
-            </p>
-            <span>Clients Worldwide</span>
-          </article>
           <aside>
             <article>
               <p>
-                +<motion.span whileInView={animationProjectsCount} ref={projectCount}></motion.span>
+                +
+                <motion.span
+                  whileInView={animationClientsCount}
+                  ref={clientCount}
+                ></motion.span>
+              </p>
+              <span>Clients Worldwide</span>
+            </article>
+            <article>
+              <p>
+                +
+                <motion.span
+                  whileInView={animationProjectsCount}
+                  ref={projectCount}
+                ></motion.span>
               </p>
               <span>Projects Delivered</span>
-            </article>
-            <article data-special>
-              <p>Contact</p>
-              <span>vikrantpathania59@gmail.com</span>
             </article>
           </aside>
         </div>

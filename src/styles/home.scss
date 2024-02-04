@@ -2,7 +2,7 @@
     width: 100%;
     height: 90vh;
     display: flex;
-
+    overflow: hidden;
     >section {
         width: 100%;
         
@@ -11,22 +11,23 @@
 
             >div {
                 border-top: 1px solid $lightgray;
-                // height: 500px;
+                height: 100%;
                 padding-top: 4rem;
 
                 >h1 {
-                    font: 900 2.5rem $text1;
+                    font: 900 2rem $text1;
+                    // margin: 0;
                 }
 
                 .typewriterpara {
                     margin: 20px 0;
-                    height: 20px;
+                    height: 5px;
                     letter-spacing: 5px;
                 }
 
                 >div {
                     display: flex;
-                    margin: 4rem 0;
+                    margin: 2rem 0;
                     width: 70%;
                     gap: 4rem;
                     align-items: center;
@@ -53,15 +54,20 @@
                     }
                 }
                 
+                aside {
+                    display: flex;
+                    flex-direction: column;
+                    // width: 70%;
+                }
                 article{
-                    margin: 4rem 0;
+                    margin: 1rem 0;
                     width: 10rem;
                     position: relative;
                     &::after{
                         content: "";
                         background-color: $lightgray;
                         width: 100%;
-                        height: 5rem;
+                        height: 3rem;
                         border-radius: 50px;
                         position: absolute;
                         z-index: -1;
@@ -69,19 +75,11 @@
                         left: 20%;
                     }
                     >p{
-                        font: 900 2rem $text1;
+                        font: 900 1.5rem $text1;
                     }>span{
                         font: 500 1rem $text2;
 
                     }
-                }
-                article[data-special]{
-                    width: 16rem;
-                }
-                aside {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 70%;
                 }
             }
         }
@@ -101,19 +99,19 @@
                 background-color: $mediumaquamarine;
                 position: absolute;
                 border-radius: 50%;
+                margin-bottom: 10px;
                 z-index: -1;
             }
 
             >img {
-                margin-top: 100px;
-                width: 40vmax;
+                margin-bottom: 10px;
+                width: 35vmax;
                 object-fit: contain;
                 height: 35vmax;
                 filter: drop-shadow(0 0 10px rgba(0,0,0,0.675));
             }
         }
     }
-
     >svg {
         position: absolute;
         font-size: 3.5rem;
@@ -123,4 +121,5 @@
         transform: translateX(-50%);
         animation: animateSvg 0.7s infinite linear alternate;
     }
+
 }

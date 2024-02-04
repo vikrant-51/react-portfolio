@@ -7,11 +7,12 @@
 @import "services";
 @import "contact";
 @import "footer";
+@import "mediaquery";
 @import "animations";
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
     box-sizing: border-box;
     font-family: $text2;
     scroll-behavior: smooth;
@@ -24,9 +25,11 @@ a {
 
 body {
     background-color: $water;
+    overflow-x: hidden;
 }
 
 .disabledBtn {
-    background-color: $dark_light;
-    cursor: not-allowed;
+    color: $dark !important;
+    background-color: $lightgray !important;
+    cursor: not-allowed !important;
 }

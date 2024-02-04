@@ -39,19 +39,27 @@
     "experience": [
         {
             "jobTitle": "Angular Developer Intern",
-            "jobDescription": "As an intern, I developed an android app for Attendance Monitoring System (AMS) using Ionic framework, Angular and Google Firestore. This project gave me the opportunity to learn mobile app development with Ionic framework and cloud database integration with Google Firestore. I also enhanced my web development skills in Angular and TypeScript"
+            "date": "11-04-2023"
         },
         {
             "jobTitle": "Angular Developer 1",
-            "jobDescription": "As an intern, I developed an android app for Attendance Monitoring System (AMS) using Ionic framework, Angular and Google Firestore. "
+            "date": "11-04-2023"
         },
         {
             "jobTitle": "Angular Developer 2",
-            "jobDescription": "This project gave me the opportunity to learn mobile app development with Ionic framework and cloud database integration with Google Firestore. I also enhanced my web development skills in Angular and TypeScript"
+            "date": "11-04-2023"
         },
         {
             "jobTitle": "Angular Developer 3",
-            "jobDescription": "As an intern, I developed an android app for Attendance Monitoring System (AMS) using Ionic framework, Angular and Google Firestore. This project gave me the opportunity to learn mobile app development with Ionic framework and cloud database integration with Google Firestore. I also enhanced my web development skills in Angular and TypeScript"
+            "date": "11-04-2023"
+        },
+        {
+            "jobTitle": "Angular Developer 4",
+            "date": "11-04-2023"
+        },
+        {
+            "jobTitle": "Angular Developer 5",
+            "date": "11-04-2023"
         }
     ]
 }
