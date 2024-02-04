@@ -12,7 +12,7 @@
             >div {
                 border-top: 1px solid $lightgray;
                 height: 100%;
-                padding-top: 8rem;
+                padding-top: 6rem;
 
                 >h1 {
                     font: 900 2rem $text1;
@@ -21,7 +21,7 @@
 
                 .typewriterpara {
                     margin: 20px 0;
-                    height: 5px;
+                    height: 20px;
                     letter-spacing: 5px;
                 }
 
@@ -57,10 +57,9 @@
                 aside {
                     display: flex;
                     flex-direction: column;
-                    // width: 70%;
                 }
                 article{
-                    margin: 1rem 0;
+                    margin: 0.7rem 0;
                     width: 10rem;
                     position: relative;
                     &::after{
@@ -104,7 +103,6 @@
             }
 
             >img {
-                margin-bottom: 10px;
                 width: 35vmax;
                 object-fit: contain;
                 height: 35vmax;

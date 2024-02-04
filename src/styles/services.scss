@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh;
     padding: $p;
+
     background-color: $mediumaquamarine;
     overflow: hidden;
 
@@ -32,7 +33,6 @@
             }
 
             >svg{
-                // color: $dark;
                 font-size: 3rem;
             }
             >span{

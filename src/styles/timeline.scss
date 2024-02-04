@@ -1,12 +1,12 @@
 #timeline {
     width: 100%;
     height: 100%;
-    margin-top: 100px;
+    margin-top: 30px;
     >h2{
+        font:700 2.5rem "Open Sans", sans-serif;
         width: fit-content;
         margin: 0 auto;
         padding: 1rem;
-        // overflow: hidden;
         text-align: center;
         background-color: $water;
         border-bottom: 4px solid $mediumaquamarine;
@@ -40,7 +40,7 @@
         padding: 1rem 3rem;
         position: relative;
         background-color: inherit;
-        width: 44%;
+        width: 48%;
         text-align: justify;
 
 
@@ -49,6 +49,7 @@
 
             &::after {
                 animation: glow 1s infinite ease-in alternate;
+                animation-delay: 1s;
             }
         }
 
@@ -74,6 +75,7 @@
         }
 
         >div {
+            font-size: 0.8rem;
             padding: 20px 30px;
             background-color: $mediumaquamarine;
             color: $dark;
@@ -83,7 +85,7 @@
     }
 
     .leftTimeline {
-        left: 6%;
+        left: 2%;
         &::after {
             right: -16px;
         }
