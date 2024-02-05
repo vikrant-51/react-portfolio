@@ -6,29 +6,15 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const [ratio, setRatio] = useState(window.innerWidth / window.innerHeight);
-console.log(ratio);
-  useEffect(() => {
-    const resizeRatio = () => {
-      setRatio(window.innerWidth / window.innerHeight);
-    };
-
-    window.addEventListener("resize", resizeRatio);
-    return ()=>{
-      window.removeEventListener("resize", resizeRatio);
-
-    }
-  }, [ratio]);
-
-  return ratio < 2 ? (
+  return (
     <div className="App">
       <HeaderPhone menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Home ratio={ratio}/>
+      <Home />
       <Work />
       <TimeLine />
       <Services />
@@ -36,7 +22,7 @@ console.log(ratio);
       <Footer />
       <Toaster />
     </div>
-  ): <em id="customMessage">Please change the ratio to view website!</em>
+  );
 }
 
 export default App;
