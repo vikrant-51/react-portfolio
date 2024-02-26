@@ -5,21 +5,21 @@ import { BsArrowUpRight, BsChevronDown } from "react-icons/bs";
 import me from "../assets/logo.png";
 
 const Home = () => {
-  const clientCount = useRef(null);
-  const projectCount = useRef(null);
+  // const clientCount = useRef(null);
+  // const projectCount = useRef(null);
 
-  const animationClientsCount = () => {
-    animate(0, 100, {
-      duration: 1,
-      onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
-    });
-  };
-  const animationProjectsCount = () => {
-    animate(0, 500, {
-      duration: 1,
-      onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
-    });
-  };
+  // const animationClientsCount = () => {
+  //   animate(0, 100, {
+  //     duration: 1,
+  //     onUpdate: (v) => (clientCount.current.textContent = v.toFixed()),
+  //   });
+  // };
+  // const animationProjectsCount = () => {
+  //   animate(0, 500, {
+  //     duration: 1,
+  //     onUpdate: (v) => (projectCount.current.textContent = v.toFixed()),
+  //   });
+  // };
   const animation = {
     h1: {
       initial: {
@@ -65,7 +65,7 @@ const Home = () => {
               Projects <BsArrowUpRight />
             </a>
           </motion.div>
-          <aside>
+          {/* <aside>
             <article>
               <p>
                 +
@@ -90,7 +90,7 @@ const Home = () => {
               </p>
               <span>Projects Delivered</span>
             </article>
-          </aside>
+          </aside> */}
         </div>
       </section>
       <section>

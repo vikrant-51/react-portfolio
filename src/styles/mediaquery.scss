@@ -11,11 +11,11 @@
             &:first-of-type {
                 padding-left: $p_md;
 
-                >div aside {
-                    flex-direction: row;
-                    gap: 5rem;
-                    width: 85%;
-                }
+                // >div aside {
+                //     flex-direction: row;
+                //     gap: 5rem;
+                //     width: 85%;
+                // }
             }
 
             &:last-of-type {
@@ -101,10 +101,10 @@
                 >div {
 
 
-                    aside {
-                        gap: 3rem;
-                        width: 85%;
-                    }
+                    // aside {
+                    //     gap: 3rem;
+                    //     width: 85%;
+                    // }
 
                     >div {
                         margin: 4rem 0;
@@ -141,9 +141,9 @@
                         margin: 2rem 0;
                     }
 
-                    aside {
-                        width: 100%;
-                    }
+                    // aside {
+                    //     width: 100%;
+                    // }
                 }
             }
         }
@@ -177,7 +177,7 @@
         >section {
             .serviceBox1 {
                 >h3 {
-                    font-size: 4.5rem;
+                    font-size: 3.5rem;
                 }
 
                 >p {
@@ -220,10 +220,10 @@
                         width: 100%;
                     }
 
-                    aside {
-                        flex-direction: column;
-                        gap: 1rem;
-                    }
+                    // aside {
+                    //     flex-direction: column;
+                    //     gap: 1rem;
+                    // }
 
                     article {
                         &::after {
@@ -276,7 +276,7 @@
 
             .serviceBox1 {
                 >h3 {
-                    font-size: 4.5rem;
+                    font-size: 3rem;
                 }
 
                 >p {
@@ -368,10 +368,10 @@
 
                     }
 
-                    aside {
-                        align-items: center;
-                        gap: 1rem;
-                    }
+                    // aside {
+                    //     align-items: center;
+                    //     gap: 1rem;
+                    // }
 
                     article {
                         width: 100%;
@@ -496,7 +496,7 @@
                 grid-row: unset;
 
                 >h3 {
-                    font: 100 5rem $text1;
+                    font: 100 4rem $text1;
                 }
 
                 >p {

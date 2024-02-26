@@ -6,10 +6,12 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 import { Toaster } from "react-hot-toast";
 import Footer from "./components/Footer";
-import {useState } from "react";
+import {useEffect, useState } from "react";
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  useEffect(()=>{
+    setMenuOpen(menuOpen);
+  },[menuOpen])
   return (
     <div className="App">
       <HeaderPhone menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

@@ -1,14 +1,16 @@
 import React from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import resumePDF from "../assets/Resume.pdf";
 
 const Header = ({ menuOpen, setMenuOpen }) => {
+
   return (
     <>
       <nav>
         <NavContent setMenuOpen={setMenuOpen}/>
       </nav>
       <button className="navBtn" onClick={() => setMenuOpen(!menuOpen)}>
-        <AiOutlineMenu />
+        {menuOpen?<AiOutlineClose/>:<AiOutlineMenu />}
       </button>
     </>
   );
@@ -26,6 +28,9 @@ const NavContent = ({setMenuOpen}) => (
     </div>
     <a href="mailto:vikrantpathania59@gmail.com">
       <button>Email</button>
+    </a>
+    <a href={resumePDF} download>
+      <button>Resume</button>
     </a>
   </>
 );
